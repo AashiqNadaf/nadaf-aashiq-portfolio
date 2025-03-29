@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import './Styles.scss';
 
 const words = [
-  "<React developer />",
-  "<Web developer />",
-  "<JavaScript developer />",
-  "<Frontend engineer />",
+  '<React developer />',
+  '<Web developer />',
+  '<JavaScript developer />',
+  '<Frontend engineer />',
 ];
 
 const TypingEffect = () => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -23,13 +24,13 @@ const TypingEffect = () => {
         setCharIndex((prev) => prev + 1);
       }, 50);
       return () => clearTimeout(timeout);
-    } 
+    }
 
     if (!isDeleting && charIndex === currentWord.length) {
       // Wait for 3 seconds before deleting
       const timeout = setTimeout(() => setIsDeleting(true), 3000);
       return () => clearTimeout(timeout);
-    } 
+    }
 
     if (isDeleting && charIndex > 0) {
       // Deleting Effect
@@ -47,7 +48,7 @@ const TypingEffect = () => {
     }
   }, [charIndex, isDeleting, wordIndex]);
 
-  return <p className="font-bold text-[36px]">{text}|</p>;
+  return <p className="font-bold typing-effect--text">{text}|</p>;
 };
 
 export default TypingEffect;

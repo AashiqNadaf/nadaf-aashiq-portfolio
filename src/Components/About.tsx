@@ -1,8 +1,6 @@
 import { Col, Row } from 'antd';
 import { FullScreenDiv } from '../Utils/Constants';
-// import AboutImage from '../assets/about-image.png';
 import MotionDivWrapper from './MotionDivWrapper';
-import CloudImg from './CloudImg';
 
 const About = () => {
   return (
@@ -44,13 +42,12 @@ const About = () => {
         >
           <div className="about-content--container" style={{ gap: '0px' }}>
             <MotionDivWrapper>
-              {/* <img
-                src={AboutImage}
+              <img
+                src="https://res.cloudinary.com/dfau0jssn/image/upload/q_50/v1743244614/about-image_h6xsqs.png"
                 alt="My Image"
                 loading="lazy"
                 className="about-image"
-              /> */}
-              <CloudImg className="about-image" publidId="about-image_h6xsqs" />
+              />
             </MotionDivWrapper>
           </div>
         </Col>

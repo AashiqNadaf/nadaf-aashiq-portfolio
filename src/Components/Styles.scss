@@ -50,6 +50,10 @@
   flex-direction: column;
 }
 
+.typing-effect--text{
+  font-size: 36px;
+}
+
 .row--container{
   height: calc(100vh - 132px);
 }
@@ -197,6 +201,9 @@
   .hero-text--container {
     gap: 8px;
     align-items: center;
+    font-size: 16px;
+  }
+  .typing-effect--text {
     font-size: 16px;
   }
   .about-text--container {

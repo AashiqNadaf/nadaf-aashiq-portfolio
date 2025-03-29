@@ -5,7 +5,6 @@ import './Styles.scss';
 import { useState } from 'react';
 import AccordionBody from './AccordionBody';
 import MotionDivWrapper from './MotionDivWrapper';
-import CloudImg from './CloudImg';
 
 const Skills = () => {
   const [activeKey, setActiveKey] = useState<'0' | '1' | '2' | '3'>('0');
@@ -180,7 +179,12 @@ const Skills = () => {
         >
           <div className="skills-content--container" style={{ gap: '0px' }}>
             <MotionDivWrapper>
-              <CloudImg className="skills-image" publidId="skills-image_chxa3y" />
+              <img
+                src="https://res.cloudinary.com/dfau0jssn/image/upload/q_50/v1743244621/skills-image_chxa3y.jpg"
+                alt="My Image"
+                loading="lazy"
+                className="skills-image"
+              />
             </MotionDivWrapper>
           </div>
         </Col>

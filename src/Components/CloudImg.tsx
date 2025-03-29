@@ -18,7 +18,7 @@ const CloudImg: React.FC<CloudImagePropType> = ({
   const img = cld
     .image(publidId)
     .format('auto') // Optimize delivery by resizing and applying auto-format and auto-quality
-    .quality('auto')
+    .quality(60)
     .resize(auto().gravity(autoGravity()));
   return <AdvancedImage cldImg={img} className={className} />;
 };

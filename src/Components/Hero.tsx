@@ -1,9 +1,7 @@
 import { Col, Row } from 'antd';
 import './Styles.scss';
-// import HeroImage from '../assets/hero-image.png';
 import { FullScreenDiv } from '../Utils/Constants';
 import MotionDivWrapper from './MotionDivWrapper';
-import CloudImg from './CloudImg';
 import ResumePdf from '../assets/Nadaf_Aashiq_Resume_2025.pdf';
 import TypingEffect from './TypingEffect';
 
@@ -121,13 +119,12 @@ const Hero = () => {
         >
           <div className="hero-content--container" style={{ gap: '0px' }}>
             <MotionDivWrapper>
-              {/* <img
-                src={HeroImage}
+              <img
+                src="https://res.cloudinary.com/dfau0jssn/image/upload/q_50/v1743244615/hero-image_x1euu4.png"
                 alt="My Image"
                 loading="lazy"
                 className="hero-image"
-              /> */}
-              <CloudImg className="hero-image" publidId="hero-image_x1euu4" />
+              />
             </MotionDivWrapper>
           </div>
         </Col>
