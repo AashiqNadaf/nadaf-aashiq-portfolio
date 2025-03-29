@@ -1,0 +1,245 @@
+.navbar--sm {
+  display: none;
+}
+
+.contact--button {
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+.accordion--style {
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.2s ease-in-out;
+  width: 90%;
+}
+.accordion--style:hover {
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6);
+}
+
+.contact--button:hover {
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6);
+  transform: scale(1.05);
+}
+.contact-us--card {
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6);
+}
+
+.ant-input-status-error {
+  border: 2px solid #ff4d4f !important;
+}
+
+.ant-input-data-count {
+  color: #fff !important;
+}
+.hero-content--container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.about-content--container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.skills-content--container {
+  height: 100%;
+  width: 100%;
+}
+
+.hero-text--container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  flex-direction: column;
+  font-size: 36px;
+}
+
+.about-text--container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  flex-direction: column;
+  font-size: 16px;
+}
+.skills-text--container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  flex-direction: column;
+  font-size: 16px;
+  margin-top: 150px;
+  div {
+    width: 100%;
+    .ant-collapse-item .ant-collapse-header {
+      border: 1px solid #4d7cf4;
+      border-radius: 8px !important;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .ant-collapse-item.ant-collapse-item-active {
+      box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6);
+      .ant-collapse-content {
+        border: 1px solid #4d7cf4;
+        border-radius: 0px 0px 8px 8px !important;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    .ant-collapse-item.ant-collapse-item-active .ant-collapse-header {
+      border: 1px solid #4d7cf4;
+      transition: all 0.2s ease-in-out;
+      border-radius: 8px 8px 0 0 !important;
+      box-shadow: none;
+    }
+  }
+}
+
+.project-card {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero-image {
+  max-width: 448px;
+  max-height: 448px;
+}
+.about-image {
+  max-width: 348px;
+  max-height: 348px;
+  border-radius: 8px;
+  border: 2px solid #4d7cf4;
+}
+
+.skills-image {
+  min-height: 348px;
+  max-height: 348px;
+  border-radius: 8px;
+  margin-top: 150px;
+}
+
+.ant-modal-root {
+  .ant-modal-wrap {
+    .ant-modal {
+      width: max(75vw, 300px) !important;
+    }
+  }
+}
+
+.technology-section {
+  grid-column: span 1; /* Default: stays in the right column */
+}
+.description-section {
+  grid-column: span 3;
+}
+
+.work-org-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact-me--form{
+  width: max(9%, 350px);
+}
+
+@media (max-width: 1000px) {
+  .technology-section {
+    grid-column: span 4;
+  }
+  .description-section {
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content--container {
+    align-items: center;
+    gap: 12px;
+  }
+  .about-content--container {
+    align-items: center;
+    gap: 12px;
+  }
+  .skills-content--container {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-text--container {
+    gap: 8px;
+    align-items: center;
+    font-size: 16px;
+  }
+  .about-text--container {
+    gap: 8px;
+    align-items: center;
+    font-size: 16px;
+  }
+  .skills-text--container {
+    margin-top: 0px;
+    gap: 8px;
+    font-size: 16px;
+    width: 50%;
+    min-width: 348px;
+    .ant-collapse {
+      width: 100% !important;
+    }
+  }
+  .hero-image,
+  .about-image {
+    max-width: 248px;
+    max-height: 248px;
+  }
+  .skills-image {
+    max-width: 348px;
+    max-height: 248px;
+    min-width: 348px;
+    min-height: 248px;
+    margin-top: 0px;
+  }
+  .navbar--md {
+    display: none;
+  }
+  .navbar--sm {
+    display: block;
+  }
+  .accordion--style {
+    width: 248px;
+  }
+  .technology-section {
+    grid-column: span 4;
+  }
+  .description-section {
+    grid-column: span 4;
+  }
+  .work-org-span {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+}
