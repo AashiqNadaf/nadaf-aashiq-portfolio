@@ -45,9 +45,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   flex-direction: column;
+}
+
+.row--container{
+  height: calc(100vh - 132px);
 }
 
 .skills-content--container {

@@ -91,7 +91,10 @@ const Navbar = () => {
       </div>
       <div className="w-full h-14 fixed text-[#000] navbar--sm">
         <div className="w-full h-14  flex flex-row justify-end items-center">
-          <Button onClick={() => setIsDrawerOpen(true)} style={{marginRight: "10px"}}>
+          <Button
+            onClick={() => setIsDrawerOpen(true)}
+            style={{ marginRight: '10px' }}
+          >
             <i className="fa-solid fa-bars"></i>
           </Button>
         </div>
@@ -108,7 +111,10 @@ const Navbar = () => {
             smooth
             offset={0}
             duration={500}
-            onClick={() => setActiveTab('hero')}
+            onClick={() => {
+              setActiveTab('hero');
+              setIsDrawerOpen(false);
+            }}
             className={`font-bold text-xl w-full h-10 px-3.5 flex flex-row justify-start items-center border-2 border-[#4D7CF4] rounded-xl cursor-pointer contact--button ${
               activeTab === 'hero'
                 ? '!bg-[#4D7CF4] !text-white'
@@ -123,7 +129,10 @@ const Navbar = () => {
             smooth
             offset={20}
             duration={500}
-            onClick={() => setActiveTab('about')}
+            onClick={() => {
+              setActiveTab('about');
+              setIsDrawerOpen(false);
+            }}
             className={`font-semibold text-l w-full h-9 px-3.5 flex flex-row justify-start items-center border-2 border-[#4D7CF4] rounded-xl cursor-pointer contact--button ${
               activeTab === 'about'
                 ? '!bg-[#4D7CF4] !text-white'
@@ -138,7 +147,10 @@ const Navbar = () => {
             smooth
             offset={0}
             duration={500}
-            onClick={() => setActiveTab('skills')}
+            onClick={() => {
+              setActiveTab('skills');
+              setIsDrawerOpen(false);
+            }}
             className={`font-semibold text-l w-full h-9 px-3.5 flex flex-row justify-start items-center border-2 border-[#4D7CF4] rounded-xl cursor-pointer contact--button ${
               activeTab === 'skills'
                 ? '!bg-[#4D7CF4] !text-white'
@@ -153,7 +165,10 @@ const Navbar = () => {
             smooth
             offset={20}
             duration={500}
-            onClick={() => setActiveTab('work')}
+            onClick={() => {
+              setActiveTab('work');
+              setIsDrawerOpen(false);
+            }}
             className={`font-semibold text-l w-full h-9 px-3.5 flex flex-row justify-start items-center border-2 border-[#4D7CF4] rounded-xl cursor-pointer contact--button ${
               activeTab === 'work'
                 ? '!bg-[#4D7CF4] !text-white'
@@ -168,7 +183,10 @@ const Navbar = () => {
             smooth
             offset={20}
             duration={500}
-            onClick={() => setActiveTab('contact')}
+            onClick={() => {
+              setActiveTab('contact');
+              setIsDrawerOpen(false);
+            }}
             className={`font-semibold text-l w-full h-9 px-3.5 flex flex-row justify-start items-center border-2 border-[#4D7CF4] rounded-xl cursor-pointer contact--button ${
               activeTab === 'contact'
                 ? '!bg-[#4D7CF4] !text-white'

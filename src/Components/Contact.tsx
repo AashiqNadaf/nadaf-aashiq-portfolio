@@ -57,7 +57,6 @@ const Contact = () => {
   const [currentState, dispatch] = useReducer(reducer, initialState);
   const [messageApi, contextHolder] = message.useMessage();
   const ref = useRef(null);
-  const [scrollDirection, setScrollDirection] = useState<'down' | 'up'>('down');
   const [viewportMargin, setViewportMargin] = useState('-100px 0px -100px 0px');
   const [isValid, setIsValid] = useState({
     nameIsValid: true,
@@ -66,26 +65,16 @@ const Contact = () => {
   });
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const updateScrollDirection = () => {
-      const currentScrollY = window.scrollY;
-      setScrollDirection(currentScrollY > lastScrollY ? 'down' : 'up');
-      lastScrollY = currentScrollY;
-    };
-
     const updateViewportMargin = () => {
       setViewportMargin(
         window.innerWidth < 768 ? '0px 0px 0px 0px' : '-100px 0px -100px 0px'
       );
     };
 
-    window.addEventListener('scroll', updateScrollDirection);
     window.addEventListener('resize', updateViewportMargin);
     updateViewportMargin(); // Initial check on mount
 
     return () => {
-      window.removeEventListener('scroll', updateScrollDirection);
       window.removeEventListener('resize', updateViewportMargin);
     };
   }, []);
@@ -197,10 +186,10 @@ const Contact = () => {
         <div className="w-full h-full flex justify-center items-center">
           <motion.form
             ref={ref}
-            initial={{ opacity: 0, y: scrollDirection === 'down' ? 50 : -50 }}
+            initial={{ opacity: 0, y: 50 }} // Always fade in from the bottom
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: false, margin: viewportMargin }}
+            viewport={{ once: true, margin: viewportMargin }}
             onSubmit={onSubmitHandler}
             className="contact-me--form h-[350px] contact-us--card border-[1px] border-black rounded-md p-5 flex flex-col justify-center items-center gap-4 bg-[#4D7CF4]"
           >

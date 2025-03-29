@@ -5,13 +5,14 @@ import { FullScreenDiv } from '../Utils/Constants';
 import MotionDivWrapper from './MotionDivWrapper';
 import CloudImg from './CloudImg';
 import ResumePdf from '../assets/Nadaf_Aashiq_Resume_2025.pdf';
+import TypingEffect from './TypingEffect';
 
 const Hero = () => {
   const handleDownload = (): void => {
-    const pdfUrl = ResumePdf; 
+    const pdfUrl = ResumePdf;
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'Nadaf_Aashiq_Resume'; 
+    link.download = 'Nadaf_Aashiq_Resume';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -60,14 +61,14 @@ const Hero = () => {
                   I'am <span className="text-[#4D7CF4]">Nadaf Aashiq</span>
                 </p>
 
-                <p className="font-bold">{`<React developer />`}</p>
+                <TypingEffect />
               </div>
 
               <button
                 onClick={handleDownload}
                 className="p-3 w-auto bg-[#4D7CF4] text-neutral-50 font-bold text-l rounded-md cursor-pointer contact--button"
               >
-                Download resume
+                <i className="fa-solid fa-file-pdf mr-2"></i>Download resume.
               </button>
 
               <div className="flex flex-row justify-between items-center gap-3 w-28 px-2">

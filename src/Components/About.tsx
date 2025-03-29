@@ -13,7 +13,7 @@ const About = () => {
         </p>
       </MotionDivWrapper>
       <Row
-        className="w-full h-[calc(100%-76px)]"
+        className="w-full row--container"
         gutter={[0, { xs: 8, sm: 16, md: 24, lg: 32 }]}
       >
         <Col
